@@ -1,0 +1,45 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Простой сайт</title>
+    <link rel="stylesheet" href="{% static "styles.css" %}">
+</head>
+<body>
+    <header>
+        <h1>Добро пожаловать на мой сайт!</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url "index" %}">Главная</a></li>
+                <li><a href="#">О нас</a></li>
+                <li><a href="#">Услуги</a></li>
+                <li><a href="#">Контакты</a></li>
+            </ul>
+            <a href="#" class="login-button">Войти</a>
+        </nav>
+    </header>
+    
+    <main>
+        <section>
+            <h2>О нашем проекте</h2>
+            <p>Это простой пример сайта без форм. Здесь вы можете разместить любую информацию о вашем проекте.</p>
+        </section>
+        
+        <section>
+            <h2>Наши услуги</h2>
+            <ul>
+                <li>Услуга 1</li>
+                <li>Услуга 2</li>
+                <li>Услуга 3</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Мой сайт. Все права защищены.</p>
+    </footer>
+</body>
+</html>
