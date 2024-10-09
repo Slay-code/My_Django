@@ -1,0 +1,49 @@
+{% extends "users/base.html" %}
+{% load static %}
+
+{% block content %}
+<form action="{% url 'users:registration' %}" method='post'>
+    {% csrf_token %}
+    
+    {% if form.non_field_errors %}
+        <div class="error">
+            {{ form.non_field_errors }}
+        </div>
+    {% endif %}
+
+    <div class="container">
+        <h1>Регистрация</h1>
+
+        <div class="input-type">
+            <i class="bx bxs-user"></i>
+            <label for="id_username">Имя пользователя</label>
+            <input type="text" placeholder="Username" name='username' id='id_username' required>
+        </div>
+
+        <div class="input-type">
+            <i class="bx bxs-envelope"></i>
+            <label for="id_email">Email</label>
+            <input type="email" placeholder="Email" name='email' id='id_email' required>
+        </div>
+
+        <div class="input-pass">
+            <i class="bx bxs-lock-alt"></i>
+            <label for="id_password1">Пароль</label>
+            <input type="password" placeholder="Password" name='password1' id='id_password1' required>
+        </div>
+
+        <div class="input-pass">
+            <i class="bx bxs-lock-alt"></i>
+            <label for="id_password2">Подтверждение пароля</label>
+            <input type="password" placeholder="Confirm Password" name='password2' id='id_password2' required>
+        </div>
+
+        <button type="submit" class="login-btn">Зарегистрироваться</button>
+
+        <div class="register-link">
+            <p>Уже есть аккаунт?<a href="{% url 'users:login' %}">Войти</a></p>
+        </div>
+    </div>
+</form>
+{% endblock content %} 
+
