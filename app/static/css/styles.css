@@ -1,0 +1,136 @@
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+}
+
+header {
+    background: #333;
+    color: #fff;
+    padding: 10px 0;
+    text-align: center;
+    position: relative;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    display: inline-block;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 15px;
+}
+
+nav ul li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.login-button {
+    position: absolute;
+    right: 20px;
+    top: 15px;
+    background-color: #007bff;
+    color: white;
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.login-button:hover {
+    background-color: #0056b3;
+}
+
+main {
+    flex: 1;
+    padding: 20px;
+}
+
+section {
+    background: #fff;
+    margin: 20px 0;
+    padding: 15px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+footer {
+    text-align: center;
+    padding: 15px 0;
+    background: #333;
+    color: #fff;
+}
+
+
+.service-card {
+    display: flex; /* Используем флексбокс */
+    align-items: center; /* Выравниваем элементы по центру по вертикали */
+    background: #ffffff; /* Белый фон */
+    border-radius: 15px; /* Закругленные углы */
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Глубокая тень */
+    margin: 15px 0; /* Отступ сверху и снизу между карточками */
+    padding: 20px; /* Внутренние отступы */
+    width: 100%; /* Ширина карточки на всю длину */
+    box-sizing: border-box; /* Учитываем отступы в ширине */
+    transition: transform 0.3s, box-shadow 0.3s; /* Плавные эффекты при наведении */
+}
+
+.service-card:hover {
+    transform: translateY(-5px); /* Поднимаем карточку при наведении */
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2); /* Увеличиваем тень при наведении */
+}
+
+.service-card img {
+    max-width: 150px; /* Ограничиваем ширину изображения */
+    height: auto; /* Поддерживаем пропорции изображения */
+    border-radius: 15px; /* Закругляем углы изображения */
+    margin-right: 20px; /* Отступ справа от изображения */
+}
+
+.service-card h3 {
+    margin: 10px 0; /* Отступы для заголовка */
+    font-size: 1.5em; /* Размер шрифта для заголовка */
+    color: #333; /* Цвет заголовка */
+}
+
+.service-card p {
+    margin: 5px 0; /* Отступы для текста */
+    color: #555; /* Цвет описания */
+}
+
+.service-card .price {
+    font-weight: bold; /* Жирный шрифт для цены */
+    color: #ff5722; /* Яркий цвет для выделения цены */
+    margin-top: auto; /* Позволяем цене оставаться внизу карточки */
+    text-align: right; /* Выравниваем текст цены по правому краю */
+}
+
+
+.btn {
+    display: inline-block; /* Отображение в строку */
+    padding: 10px 20px; /* Отступы */
+    background-color: #4CAF50; /* Цвет фона */
+    color: white; /* Цвет текста */
+    text-align: center; /* Выравнивание текста */
+    text-decoration: none; /* Убираем подчеркивание */
+    border-radius: 5px; /* Закругленные углы */
+    transition: background-color 0.3s; /* Плавный переход */
+}
+
+.btn:hover {
+    background-color: #45a049; /* Цвет фона при наведении */
+}

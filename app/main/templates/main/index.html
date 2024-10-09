@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% load static %}
+
+{% block content %}
+<section class="qwer">
+    <h2>Наши услуги</h2>
+    {% for service in services %}
+    <div class="service-card">
+        {% if service.image %}
+        <img src="{{ service.image.url }}" alt="{{ service.name }}">
+        {% else %}
+        <div class="placeholder-image">Изображение недоступно</div> <!-- Альтернативное отображение -->
+        {% endif %}
+        <div>
+            <h3>{{ service.name }}</h3>
+            <p>{{ service.description }}</p>
+            <p class="price">Цена: {{ service.price }} руб.</p>
+            <a href="#" class="btn">Заказать</a> <!-- Кнопка заказа -->
+        </div>
+    </div>
+    {% endfor %}
+</section>
+{% endblock content %}
+
+
